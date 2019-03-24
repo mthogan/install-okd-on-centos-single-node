@@ -147,8 +147,9 @@ fi
 
 #export METRICS="True"
 #export LOGGING="True"
-export METRICS="False"	# Turning off metrics for Dev environment
-export LOGGING="False"	# Turning off logging for Dev environment
+# Turning off metrics for Dev environment
+export METRICS="False"
+export LOGGING="False"
 
 memory=$(cat /proc/meminfo | grep MemTotal | sed "s/MemTotal:[ ]*\([0-9]*\) kB/\1/")
 
