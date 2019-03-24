@@ -145,8 +145,10 @@ if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh -o StrictHostKeyChecking=no root@$IP "pwd" < /dev/null
 fi
 
-export METRICS="True"
-export LOGGING="True"
+#export METRICS="True"
+#export LOGGING="True"
+export METRICS="False"	# Turning off metrics for Dev environment
+export LOGGING="False"	# Turning off logging for Dev environment
 
 memory=$(cat /proc/meminfo | grep MemTotal | sed "s/MemTotal:[ ]*\([0-9]*\) kB/\1/")
 
